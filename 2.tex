@@ -25,4 +25,36 @@ Let $X$ be a topological space; let $A$ be a subset of $X$. Suppose that for eac
     Conversely, let $a \in \bigcap_{x \in A} U_x$. Then $a$ lies in some $U_x$ such that $U_x \subset A$, and so $a \in A$. Thus $A = \bigcup_{x \in A} U_x$.
 \end{proof}
 
+\subsection*{2. (7/30/24)}
+
+Consider the nine topologies on the set $X = \{ a, b, c \}$ indicated in Example 1 of §12. Compare them; that is, for each pair of topologies, determine whether they are comparable, and if so, which is the finer.
+
+\begin{proof}[Solution.]
+    Let the nine topologies on $X$ be:
+
+    \begin{center}
+        \begin{tabular}{ c c }
+            i) & $\{ \varnothing, X \}$ \\
+            ii) & $\{ \varnothing, \{ a \}, \{ a, b \}, X \}$ \\
+            iii) & $\{ \varnothing, \{ b \}, \{ a, b \}, \{ b, c \}, X \}$ \\
+            iv) & $\{ \varnothing, \{ b \}, X \}$ \\
+            v) & $\{ \varnothing, \{ a \}, \{ b, c \}, X \}$ \\
+            vi) & $\{ \varnothing, \{ b \}, \{ c \}, \{ a, b \}, \{ b, c \}, X \}$ \\
+            vii) & $\{ \varnothing, \{ a, b \}, X \}$ \\
+            vii) & $\{ \varnothing, \{ a \}, \{ b \}, \{ a, b \}, X \}$ \\
+            ix) & $\{ \varnothing, \{ a \}, \{ b \}, \{ c \}, \{ a, b \}, \{ b, c \}, \{ a, c \}, X \}$ \\
+        \end{tabular}
+    \end{center}
+    Then:
+    \begin{enumerate}[label=\roman{enumi})]
+        \item is coarser than every other topology; ix) is finer than every other topology;
+        \item is finer than vii), is not comparable to iii), iv), v), and vi), and is coarser than viii);
+        \item is finer than iv) and vii), and is not comparable to v), vi), and viii);
+        \item is not comparable to v) and vii), and is coarser than vi) and viii);
+        \item is not comparable to vi), vii), or vii);
+        \item is finer than vii) and is not comparable to viii); and
+        \item is coarser than viii).
+    \end{enumerate}
+\end{proof}
+
 \end{document}
