@@ -1,0 +1,28 @@
+\documentclass{article}
+
+\title{Munkres Ch. 2: Topological Spaces and Continuous Functions}
+\author{Scott Donaldson}
+\date{Jul. 2024}
+\usepackage{amsmath, amsthm, amsfonts, amssymb, enumitem, tabu, tikz}
+
+\begin{document}
+
+\maketitle
+
+\section*{§12. Topological Spaces\\§13. Basis for a Topology}
+
+\subsection*{1. (7/30/24)}
+
+Let $X$ be a topological space; let $A$ be a subset of $X$. Suppose that for each $x \in A$ there is an open set $U$ containing $x$ such that $U \subset A$. Show that $A$ is open in $X$.
+
+\begin{proof}
+    From the definition of an open set in a topological space, we know that an arbitrary union of open sets is again an open set. We will show that $A$ is a union of open sets in $X$, and is therefore open.
+
+    For each $x \in A$, there exists an open set $U_x$ containing $x$ that is a subset of $A$. We claim that $A = \bigcup_{x \in A} U_x$.
+
+    Let $a \in A$. It is given that there exists a $U_a \subset A$ with $a \in U_x$. Therefore $a \in \bigcap_{x \in A} U_x$.
+
+    Conversely, let $a \in \bigcap_{x \in A} U_x$. Then $a$ lies in some $U_x$ such that $U_x \subset A$, and so $a \in A$. Thus $A = \bigcup_{x \in A} U_x$.
+\end{proof}
+
+\end{document}
