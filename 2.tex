@@ -57,4 +57,38 @@ Consider the nine topologies on the set $X = \{ a, b, c \}$ indicated in Example
     \end{enumerate}
 \end{proof}
 
+\subsection*{3. (7/31/24)}
+
+Show that the collection $\mathcal{T}_C$ given in Example 4 of §12 is a topology on the set $X$. Is the collection
+\begin{equation*}
+    \mathcal{T}_\infty = \{ U \mid X - U \text{ is infinite or empty or all of }X \}
+\end{equation*}
+a topology on $X$?
+
+\begin{proof}
+    Let $\mathcal{T}_C = \{ U \mid X - U \text{ is countable or is all of }X \}$. Now $\mathcal{T}_C$ certainly contains $\varnothing$ and $X$, since $X - \varnothing = X$ and $X - X = \varnothing$, a countable set.
+
+    We must next show that arbitrary unions and finite intersections of elements of $\mathcal{T}_C$ are again elements of $\mathcal{T}_C$.
+
+    Let $\{ U_\alpha \}$ be an indexed family of nonempty elements of $\mathcal{T}_C$. To show that $\bigcup U_\alpha$ is in $\mathcal{T}_C$, we compute:
+    \begin{equation*}
+        X - \bigcup U_\alpha = \bigcap (X - U_\alpha),
+    \end{equation*}
+    and since each $X - U_\alpha$ is countable, their intersection is also countable. Therefore an arbitrary union of elements of $\mathcal{T}_C$ lies in $\mathcal{T}_C$.
+
+    Finally, let $U_1, U_2, ..., U_n$ be nonempty elements of $\mathcal{T}_C$ and consider $\bigcup_{i = 1}^n U_i$. We have:
+    \begin{equation*}
+        X - \bigcap_{i = 1}^n U_i = \bigcup_{i = 1}^n (X - U_i),
+    \end{equation*}
+    which is a finite union of countable sets, and is therefore countable. Thus $\bigcup_{i = 1}^n U_i$ is in $\mathcal{T}_C$, and so $\mathcal{T}_C$ is a topology on $X$.
+
+    Next we consider $\mathcal{T}_\infty = \{ U \mid X - U \text{ is infinite or empty or all of }X \}$, and claim that it is not a topology on the set $X$. As a counterexample, suppose that
+    \begin{align*}
+        X &= \mathbb{R}, \\
+        U_a &= \{ x \in X \mid x < 0 \}, \text{ and } \\
+        U_b &= \{ x \in X \mid x > 0 \}.
+    \end{align*}
+    Then $U_a \cup U_b = \{ x \in X \mid x < 0 \text{ or } x > 0 \}$, that is, the nonzero real numbers, whose complement is $\{ 0 \}$, a finite set, and therefore the union of $U_a$ and $U_b$ is not a member of $\mathcal{T}_\infty$. It is therefore not a topology on $X$.
+\end{proof}
+
 \end{document}
